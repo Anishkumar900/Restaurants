@@ -5,7 +5,7 @@ import PaymentMain from './Payment/PaymentMain';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/Restaurants'>
     <Routes>
       <Route path='/' element={<Main/>}></Route>
       <Route path='/setting/payout' element={<PaymentMain/>}/>
