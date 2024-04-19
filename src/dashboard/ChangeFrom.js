@@ -206,7 +206,7 @@ export default function ChangeFrom() {
             onChange={handleChange}
             required
           />
-          <p className='brandName hidden text-xs text-red-600'>field is required</p>
+          <p className='brandName hidden text-xs md:text-md text-red-600'>field is required</p>
         </div>
         <div className="w-full md:w-1/3 mb-4 md:mb-0 md:px-3">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="emailAddress">
@@ -222,7 +222,7 @@ export default function ChangeFrom() {
             onChange={handleChange}
             required
           />
-          <p className='emailAddress hidden text-xs text-red-600'>field is required</p>
+          <p className='emailAddress hidden text-xs md:text-md text-red-600'>field is required</p>
         </div>
         <div className="w-full md:w-1/3 mb-4 md:mb-0 md:px-3">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="contactNumber">
@@ -239,7 +239,7 @@ export default function ChangeFrom() {
             required
 
           />
-          <p className='contactNumber hidden text-xs text-red-600'>field is required</p>
+          <p className='contactNumber hidden text-xs md:text-md text-red-600'>field is required</p>
         </div>
         {/* second line */}
 
@@ -258,7 +258,7 @@ export default function ChangeFrom() {
             onChange={handleChange}
             required
           />
-          <p className='ContactPerson hidden text-xs text-red-600'>field is required</p>
+          <p className='ContactPerson hidden text-xs md:text-md text-red-600'>field is required</p>
         </div>
         <div className="w-full md:w-1/3 mb-4 md:mb-0 md:px-3 md:mt-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="emailAddress">
@@ -274,7 +274,7 @@ export default function ChangeFrom() {
             onChange={handleChange}
             required
           />
-          <p className='outletAddress hidden text-xs text-red-600'>field is required</p>
+          <p className='outletAddress hidden text-xs md:text-md text-red-600'>field is required</p>
         </div>
         <div className="w-full md:w-1/3 mb-4 md:mb-0 md:px-3 md:mt-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="contactNumber">
@@ -294,7 +294,7 @@ export default function ChangeFrom() {
             <option value="Services">Services</option>
             <option value="Manufacturing">Manufacturing</option>
           </select>
-          <p className='businessType hidden text-xs text-red-600'>field is required</p>
+          <p className='businessType hidden text-xs md:text-md text-red-600'>field is required</p>
         </div>
 
 
@@ -321,7 +321,7 @@ export default function ChangeFrom() {
             <option value="China">China</option>
             <option value="Pakishtan">Pakishtan</option>
           </select>
-          <p className='cuisinesServed hidden text-xs text-red-600'>field is required</p>
+          <p className='cuisinesServed hidden text-xs md:text-md text-red-600'>field is required</p>
         </div>
 
 

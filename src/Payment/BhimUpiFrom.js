@@ -110,7 +110,7 @@ export default function BhimUpiFrom(props) {
                         required
                         value={formData.UpiId}
                     />
-                    <p className='UpiId hidden text-xs text-red-600'>field is required</p>
+                    <p className='UpiId hidden text-xs md:text-md text-red-600'>field is required</p>
                 </div>
                 <div className="w-full md:w-1/2 mb-4 md:mb-0 md:px-3">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="brandName">
@@ -126,7 +126,7 @@ export default function BhimUpiFrom(props) {
                         required
                         value={formData.UpiNumber}
                     />
-                    <p className='UpiNumber hidden text-xs text-red-600'>field is required</p>
+                    <p className='UpiNumber hidden text-xs md:text-md text-red-600'>field is required</p>
                 </div>
 
                 {

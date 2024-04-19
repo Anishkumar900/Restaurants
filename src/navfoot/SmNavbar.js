@@ -22,7 +22,7 @@ export default function SmNavbar() {
     document.getElementById("Customers").style.backgroundColor = "white";
     document.getElementById("Settings").style.backgroundColor = "white";
     document.getElementById("Logout").style.backgroundColor = "white";
-    
+    setshow(!show)
 }
 const Menu=()=>{
     document.getElementById("Dashboard").style.backgroundColor = "white";
@@ -32,7 +32,7 @@ const Menu=()=>{
     document.getElementById("Customers").style.backgroundColor = "white";
     document.getElementById("Settings").style.backgroundColor = "white";
     document.getElementById("Logout").style.backgroundColor = "white";
-    
+    setshow(!show)
 }
 const Payments=()=>{
     document.getElementById("Dashboard").style.backgroundColor = "white";
@@ -42,7 +42,7 @@ const Payments=()=>{
     document.getElementById("Customers").style.backgroundColor = "white";
     document.getElementById("Settings").style.backgroundColor = "white";
     document.getElementById("Logout").style.backgroundColor = "white";
-    
+    setshow(!show)
 }
 const Offers=()=>{
     document.getElementById("Dashboard").style.backgroundColor = "white";
@@ -52,6 +52,7 @@ const Offers=()=>{
     document.getElementById("Customers").style.backgroundColor = "white";
     document.getElementById("Settings").style.backgroundColor = "white";
     document.getElementById("Logout").style.backgroundColor = "white";
+    setshow(!show)
     
 }
 const Customers=()=>{
@@ -62,7 +63,7 @@ const Customers=()=>{
     document.getElementById("Customers").style.backgroundColor = "lightblue";
     document.getElementById("Settings").style.backgroundColor = "white";
     document.getElementById("Logout").style.backgroundColor = "white";
-    
+    setshow(!show)
 }
 const Settings=()=>{
     document.getElementById("Dashboard").style.backgroundColor = "white";
@@ -72,7 +73,7 @@ const Settings=()=>{
     document.getElementById("Customers").style.backgroundColor = "white";
     document.getElementById("Settings").style.backgroundColor = "lightblue";
     document.getElementById("Logout").style.backgroundColor = "white";
-    
+    setshow(!show)
 }
 const Logout=()=>{
     document.getElementById("Dashboard").style.backgroundColor = "white";
@@ -82,7 +83,7 @@ const Logout=()=>{
     document.getElementById("Customers").style.backgroundColor = "white";
     document.getElementById("Settings").style.backgroundColor = "white";
     document.getElementById("Logout").style.backgroundColor = "lightblue";
-    
+    setshow(!show)
 }
 
 useEffect(()=>{

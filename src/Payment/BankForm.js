@@ -127,7 +127,7 @@ export default function BankForm(props) {
                         onChange={handleChange}
                         required
                     />
-                    <p className='bankAccount hidden text-xs text-red-600'>field is required</p>
+                    <p className='md:text-md bankAccount hidden text-xs text-red-600'>field is required</p>
                 </div>
                 <div className="w-full md:w-1/2 mb-4 md:mb-0 md:px-3">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="brandName">
@@ -143,7 +143,7 @@ export default function BankForm(props) {
                         required
                         value={formData.ifscCode}
                     />
-                    <p className='ifscCode hidden text-xs text-red-600'>field is required</p>
+                    <p className='ifscCode hidden md:text-md text-xs text-red-600'>field is required</p>
                 </div>
                 <div className="w-full md:w-1/2 mb-4 md:mb-0 md:px-3 md:mt-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="brandName">
@@ -159,7 +159,7 @@ export default function BankForm(props) {
                         onChange={handleChange}
                         required
                     />
-                    <p className='BenificeiryName hidden text-xs text-red-600'>field is required</p>
+                    <p className='BenificeiryName hidden md:text-md text-xs text-red-600'>field is required</p>
                 </div>
                 {
                     props.option === "Bank Transfer" && <div className="w-full mt-4 md:px-3">
