@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./ChangeFrom.css";
+import Select from "react-dropdown-select"
 
 export default function ChangeFrom() {
   const [error, seterror] = useState(false)
@@ -11,12 +12,14 @@ export default function ChangeFrom() {
     ContactPerson: "",
     outletAddress: "",
     businessType: "",
-    cuisinesServed: "",
+    cuisinesServed: [],
     Instagram: "",
+
   })
 
-  const handleChange = (e) => {
+  
 
+  const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
 
@@ -104,7 +107,7 @@ export default function ChangeFrom() {
         elements[i].style.display = "none";
       }
     }
-    if (formData.cuisinesServed === "") {
+    if (formData.cuisinesServed === null || formData.cuisinesServed.length===0 ) {
       const elements = document.getElementsByClassName("cuisinesServed");
       for (let i = 0; i < elements.length; i++) {
         elements[i].style.display = "block";
@@ -118,7 +121,7 @@ export default function ChangeFrom() {
       }
 
     }
-
+   
     return count;
   }
 
@@ -139,7 +142,7 @@ export default function ChangeFrom() {
             ContactPerson: "",
             outletAddress: "",
             businessType: "",
-            cuisinesServed: "",
+            cuisinesServed: [],
             Instagram: "",
           });
           const brandNameElements = document.getElementsByClassName("brandName");
@@ -173,22 +176,18 @@ export default function ChangeFrom() {
           
           seterror(false);
       }
-
-
-
-
-    // console.log(formData);
-    // setFormData({
-    //   brandName: "",
-    //   emailAddress: "",
-    //   contactNumber: "",
-    //   ContactPerson: "",
-    //   outletAddress: "",
-    //   businessType: "",
-    //   cuisinesServed: "",
-    //   Instagram: "",
-    // });
   }
+
+  const options=[
+    {id:"India",name:1},
+    {id:"Pakishtan",name:2},
+    {id:"Maldeep",name:3},
+    {id:"Chaina",name:4}
+  ]
+  const [value,setvalue]=useState(null);
+
+  
+
   return (
     <div className="max-w-screen-xl mx-auto">
       <form noValidate onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-wrap">
@@ -302,27 +301,35 @@ export default function ChangeFrom() {
 
         {/* third line */}
 
-
         <div className="w-full md:w-1/3 mb-4 md:mb-0 md:px-3 lg:mt-4 md:mt-8">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="contactNumber">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="contactNumber"
+          >
             cuisines Served
           </label>
-          <select
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="cuisinesServed"
+          <Select
             name="cuisinesServed"
-            value={formData.cuisinesServed}
-            onChange={handleChange}
-            required
-
-          >
-            <option disabled value=''>Option</option>
-            <option value="Indian">Indian</option>
-            <option value="China">China</option>
-            <option value="Pakishtan">Pakishtan</option>
-          </select>
-          <p className='cuisinesServed hidden text-xs md:text-md text-red-600'>field is required</p>
+            options={options}
+            labelField="id"
+            valueField="id"
+            multi
+            onChange={(selectedOptions) =>
+              setFormData({
+                ...formData,
+                cuisinesServed: selectedOptions.map((option) => option.id),
+              })
+            }
+            color="#72bcd4"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-900 leading-tight focus:outline-none focus:shadow-outline"
+          />
+          <p className="cuisinesServed hidden text-xs md:text-md text-red-600">
+            field is required
+          </p>
         </div>
+
+
+
 
 
         <div className="w-full md:w-1/3 mb-4 md:mb-0 md:px-3 lg:mt-4 md:mt-8">
@@ -342,9 +349,12 @@ export default function ChangeFrom() {
 
 
 
+       
 
-        {/* Continue adding input fields for address, business type, server, and Instagram link */}
-        {/* Ensure to handle state changes for these fields */}
+
+
+
+       
         <div className="w-full mt-4 md:px-3">
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"

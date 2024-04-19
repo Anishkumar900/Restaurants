@@ -52,7 +52,7 @@ export default function Setting() {
             <p>Manage your account setting</p>
         </div>
         <div className=' bg-blue-50 pb-4'>
-            <div className='bg-white mx-4 '>
+            <div className='bg-white md:mx-4 mx-0 '>
             <div className='flex gap-10 p-6  '>
                 <button id='BusinessInfo' className=' border-black border p-2 rounded-lg ' onClick={BusinessInfo}>Business Info</button>
                 <button id='PayoutDetails' className=' border-black border p-2 rounded-lg ' onClick={PayoutDetails}>Payout Details</button>
