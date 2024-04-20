@@ -49,7 +49,7 @@ export default function PaymentSetting() {
         <p>Manage your account setting</p>
     </div>
     <div className=' bg-blue-50 pb-4'>
-        <div className='bg-white mx-4 '>
+        <div className='bg-white md:mx-4 mx-0 '>
         <div className='flex md:gap-10 gap-6 p-6  '>
             <button id='BusinessInfo' className=' border-black border p-2 rounded-lg ' onClick={BusinessInfo}>Business Info</button>
             <button id='PayoutDetails' className=' border-black border p-2 rounded-lg ' onClick={PayoutDetails}>Payout Details</button>
@@ -118,7 +118,7 @@ export default function PaymentSetting() {
         </div> */}
         
         </div>
-        <div className='mx-4  border-gray-400 rounded-md p-5 border-2'>
+        <div className='mx-4 mt-4 border-gray-400 rounded-md p-5 border-2'>
         <Footer/>
         </div>
         
